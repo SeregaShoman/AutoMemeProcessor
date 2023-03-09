@@ -1,6 +1,7 @@
 from src.upload_memes import UploaderMemes as _UM
 import datetime
 import configparser
+import time
 
 config = configparser.ConfigParser()
 config.read('..\\config.ini', encoding='utf-8')
@@ -20,5 +21,6 @@ class UploadMemesProcessor(_UM):
         for request in self._get_requests_from_config():
             self.parse_html(self.search_url+request+" "+self.now.strftime('%Y-%m-%d'))
             self.get_image_and_save()
+            time.sleep(5)
         print("Загрузка мемов окончена")
 
