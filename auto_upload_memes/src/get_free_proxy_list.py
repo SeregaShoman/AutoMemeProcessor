@@ -1,23 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-# URL сайта с таблицей прокси-серверов
-
-
-# Запрос страницы
-
-# Создание объекта BeautifulSoup из HTML-кода страницы
-
-
-# Нахождение таблицы с прокси-серверами
-
-
-# Нахождение всех строк таблицы
-
-
-# Извлечение IP-адресов и портов из строк таблицы
-
-
 class GetProxyList:
     url = "https://free-proxy-list.net/"
     response = requests.get(url)
