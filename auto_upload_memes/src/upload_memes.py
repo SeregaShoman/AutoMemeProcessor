@@ -1,7 +1,7 @@
 import requests
 import shortuuid
 from bs4 import BeautifulSoup
-from .logger import Logger
+from src.logger import Logger
 
 class UploaderMemes():
     

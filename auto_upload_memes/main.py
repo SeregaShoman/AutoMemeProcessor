@@ -8,7 +8,7 @@ def main():
     a = UploadMemesProcessor()
     a.use_uploader()    
 
-schedule.every(1).minutes.do(main)
+schedule.every(15).hours.do(main)
 
 while True:
     schedule.run_pending()

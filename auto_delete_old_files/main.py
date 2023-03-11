@@ -7,7 +7,7 @@ def main():
     f = a.get_file_inform()
     a.check_and_delete_files(f)
 
-schedule.every(1).minutes.do(main)
+schedule.every(24).hours.do(main)
 
 while True:
     schedule.run_pending()
