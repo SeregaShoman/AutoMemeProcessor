@@ -5,10 +5,11 @@ import configparser
 import time
 
 config = configparser.ConfigParser()
-config.read('..\\config.ini', encoding='utf-8')
+config.read('..\\..\\config.ini', encoding='utf-8')
 
 class UploadMemesProcessor(_UM):
     search_url = config["MEMEUPLOADERURL"]["url"]
+    folder_path = config['CHECKERFILES']["path_to_folder"]
     now = datetime.datetime.now()
     
     @Logger.log
@@ -23,7 +24,7 @@ class UploadMemesProcessor(_UM):
         print("Начинается загрузка мемов")
         for request in self._get_requests_from_config():
             self.parse_html(self.search_url+request+" "+self.now.strftime('%Y-%m-%d'))
-            self.get_image_and_save()
+            self.get_image_and_save(self.folder_path)
             time.sleep(5.5)
         print("Загрузка мемов окончена")
 

@@ -3,7 +3,7 @@ import datetime
 import configparser
 
 config = configparser.ConfigParser()
-config.read('..\\config.ini', encoding='utf-8')
+config.read('..\\..\\config.ini', encoding='utf-8')
 folder_path = config['CHECKERFILES']["path_to_folder"]
 
 class FilesProcessor():

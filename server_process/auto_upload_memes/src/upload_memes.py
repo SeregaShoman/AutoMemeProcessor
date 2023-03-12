@@ -18,9 +18,9 @@ class UploaderMemes():
         return new_name
 
     @Logger.log
-    def get_image_and_save(self):
+    def get_image_and_save(self, file_path):
         for img in self.soup.find_all('img', {'class': 'serp-item__thumb justifier__thumb'}):
             image_url = img['src']
-            with open(f'..\\images\\{self._get_unique_name_and_uuid()}.jpg', 'wb') as f:
+            with open(f'{file_path}\\{self._get_unique_name_and_uuid()}.jpg', 'wb') as f:
                 response = requests.get("https:"+image_url)
                 f.write(response.content)
