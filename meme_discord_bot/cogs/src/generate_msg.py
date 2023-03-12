@@ -1,7 +1,7 @@
 import random
 import tensorflow as tf
 
-one_step = tf.saved_model.load('..\\models\\one_step_35_epoch')
+one_step = tf.saved_model.load('..\\models\\greetings')
 
 def generate_msg_txt():
     states = None

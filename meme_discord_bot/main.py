@@ -12,6 +12,7 @@ bot = commands.Bot(command_prefix='$', intents=discord.Intents.all(), case_insen
 async def on_ready():
     await bot.load_extension("cogs.event_cog")
     await bot.load_extension("cogs.help_inform_cog")
+    await bot.load_extension("cogs.picture_сog")
     print('Logged in as {0.user}'.format(bot))
 
 bot.run(config["DISCORDBOT"]["token"])
