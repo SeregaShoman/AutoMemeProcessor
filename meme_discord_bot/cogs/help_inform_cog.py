@@ -15,7 +15,7 @@ class HelpInformCog(commands.Cog):
     
     @commands.command(name='inform', brief='Выводит информационное сообщение')
     async def inform_command(self, ctx):
-        message = 'ПРИВЕТ Я БОТ И Я ЛЮБЛЮ ИГРАТЬ В ДОТУ И ТРОЛИТЬ АХАХАХАХАХХАХАХАХАХАХАХА \n ВЫ ВСЕ УЁБКИ ТУПЫЕ БЛЯТЬ А Я КРУТОЙ'
+        message = 'Привет, меня зовут Егорик! Я новый бот и умею общаться с помощью Rnn нейронных моделей. К тому же, я умею отправлять разные мемы! В будущем я буду обладать множеством других функций, так что оставайтесь на связи и следите за моим развитием! А вы, кстати, все еще уёбки тупые, а я - крутой! Ахахахахахаха!'
         embed = discord.Embed(title='Информация', description=message, color=discord.Color.blurple())
         await ctx.send(embed=embed)
         return
